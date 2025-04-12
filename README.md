@@ -7,15 +7,15 @@ Saya Muhammad Igin Adigholib dengan NIM 2301125 mengerjakan Tugas Praktikum 6 da
 ![WhatsApp Image 2025-04-12 at 20 31 44_1c8fde70](https://github.com/user-attachments/assets/27a27ed8-0917-4847-b3d4-e8b3cd11690b)
 
 # Alur Program
-Program dimulai dari kelas App, yang berfungsi sebagai titik masuk utama aplikasi. Di dalam metode main, program langsung menampilkan jendela awal berupa objek StartMenu, yang merupakan antarmuka awal game. StartMenu menampilkan dua tombol utama, yaitu "Start Game" untuk memulai permainan dan "Exit" untuk keluar dari aplikasi. Ketika pengguna menekan tombol "Start Game", menu akan ditutup, dan jendela baru akan dibuka untuk menampilkan panel permainan FlappyBird.
+Program ini dimulai dari kelas App, yang jadi pintu masuk utama aplikasi. Di method main(), langsung muncul tampilan awal lewat objek StartMenu, yaitu menu awal dari game-nya. Di sana ada dua tombol: "Start Game" buat mulai main, dan "Exit" buat keluar. Nah, kalau tombol "Start Game" ditekan, menu akan nutup dan game FlappyBird langsung dijalankan dalam jendela baru.
 
-Kelas FlappyBird merupakan inti dari permainan. Kelas ini memperluas JPanel dan mengimplementasikan KeyListener serta ActionListener, sehingga dapat merespons input keyboard dan mengatur logika game secara periodik menggunakan Timer. Saat panel dibuat, gambar-gambar seperti latar belakang, burung, dan pipa akan dimuat dari file gambar. Burung direpresentasikan dengan objek Player, yang memiliki atribut posisi, kecepatan, dan gambar, serta method untuk memperbarui dan mendapatkan posisi atau area bounding-nya.
+Kelas FlappyBird ini adalah inti dari gamenya. Kelas ini merupakan panel (JPanel) yang bisa merespons tombol keyboard dan menjalankan logika game secara berkala pakai Timer. Begitu panel ini aktif, semua gambar penting seperti background, burung, dan pipa langsung dimuat. Burung di sini dibuat dari objek Player, yang punya informasi posisi, gambar, dan kecepatan jatuhnya, plus beberapa method buat ngatur gerakannya dan ngecek tabrakan.
 
-Permainan berlangsung dengan adanya dua Timer, yaitu gameloop dan pipesCooldown. gameloop berjalan 60 kali per detik dan bertugas memperbarui posisi burung serta pipa, mengecek tabrakan, serta memperbarui tampilan layar. Sementara itu, pipesCooldown berjalan setiap 1,5 detik untuk menambahkan sepasang pipa (atas dan bawah) ke dalam permainan. Pipa direpresentasikan oleh objek Pipe, yang memiliki atribut posisi, kecepatan gerak horizontal, dan flag passed yang digunakan untuk menghitung skor saat burung berhasil melewatinya.
+Untuk jalannya game, ada dua Timer yang jalan: gameloop dan pipesCooldown. Timer gameloop ngejalanin update posisi burung dan pipa sebanyak 60 kali per detik, ngecek tabrakan, dan nge-refresh layar. Sedangkan pipesCooldown bakal nambahin pipa baru setiap 1,5 detik. Pipa-pipa ini dibuat dari objek Pipe, yang punya posisi, gambar, kecepatan gerak ke kiri, dan flag buat nentuin apakah udah dilewati burung (buat hitung skor).
 
-Pengguna dapat menekan tombol spasi (SPACE) untuk membuat burung melompat ke atas dengan mengurangi kecepatan vertikalnya. Jika burung bertabrakan dengan pipa atau jatuh ke dasar layar, maka game akan dihentikan, dan dialog "Game Over" akan ditampilkan. Pemain dapat memulai ulang permainan dengan menekan tombol R, yang akan mereset posisi burung, menghapus semua pipa yang ada, dan mengaktifkan kembali kedua timer.
+Pas main, kita bisa tekan tombol spasi (SPACE) buat bikin burung terbang ke atas. Kalau burung nabrak pipa atau jatuh ke bawah, game otomatis berhenti dan muncul pesan "Game Over". Tapi tenang aja, bisa langsung restart game-nya dengan tekan tombol R — nanti posisi burung di-reset, semua pipa dihapus, dan game dimulai lagi dari awal.
 
-Dengan alur ini, program membentuk permainan Flappy Bird versi desktop berbasis Java Swing yang interaktif dan responsif terhadap input pengguna.
+Intinya, program ini bikin game Flappy Bird versi desktop yang ringan dan seru, dibikin pakai Java Swing, dan pastinya responsif terhadap input pemain.
 
 # Dokumentasi
 https://github.com/user-attachments/assets/e1c53201-0e5c-4936-9f15-19d79aaa2b7c
